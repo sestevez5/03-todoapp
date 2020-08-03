@@ -1,0 +1,17 @@
+    <!-- `editing` `completed`-->
+    <li [class.completed]="todo.completado">
+      <div class="view">
+        <input
+          class="toggle"
+          [formControl] = "chkCompletado"
+          type="checkbox">
+
+        <label>{{ todo.texto}}</label>
+
+        <button class="destroy"></button>
+      </div>
+      <input
+        class="edit"
+        [formControl]="txtInput"
+        type="text">
+    </li>
