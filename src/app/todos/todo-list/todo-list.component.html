@@ -2,7 +2,7 @@
     <ul class="todo-list">
 
       <app-todo-item
-        *ngFor="let todo of this.todos"
+        *ngFor="let todo of this.todos | filtroTodo: filtroActual"
         [todo]="todo"></app-todo-item>
 
     </ul>

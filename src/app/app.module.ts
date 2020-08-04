@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { StoreModule } from '@ngrx/store';
-import { todoReducer } from './todos/todo.reducer';
+import { appReducers } from './app-reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
 
 
 import { AppComponent } from './app.component';
@@ -23,7 +22,7 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     ReactiveFormsModule,
     TodoModule,
-    StoreModule.forRoot( { todos: todoReducer}),
+    StoreModule.forRoot( appReducers ),
     StoreDevtoolsModule.instrument(
       {
         maxAge: 25,

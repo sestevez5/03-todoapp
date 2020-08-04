@@ -9,8 +9,8 @@
           type="checkbox">
 
         <label (dblclick)="onEditar()">{{this.todo.texto}}</label>
-       
-        <button class="destroy"></button>
+
+        <button class="destroy" (click)="onBorrar()"></button>
       </div>
       <input
         class="edit"
